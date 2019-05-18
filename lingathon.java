@@ -62,24 +62,8 @@ public class lingathon{
 		
 		System.out.println("input:");
 		String s= sc.nextLine();
-		match(s);
-		//System.out.println(hashGroup().get("dəlkʷʼaxbət"));
-		//System.out.println();
-		//String s=hashGroup().get("dəlkʷʼaxbət");
-		//char c[]= s.toCharArray();
-		/*for(int i=0;i<c.length;i++)
-		{
-			String compareS=Character.toString(c[i]);
-			for(int j=0;j<input.length;j++)
-			{
-				if((hashGroup().get(input[j])).contains(compareS))
-				{
-					System.out.println(hashGroup().get(input[j]));
-				}
-				
-			}
-		}*/
 		
+		logicalReason(s);
 	}
 	
 	//find the prefix or roots
@@ -224,89 +208,65 @@ public class lingathon{
 		
 	}
 	
-	
-	
-	
-	
-	static void match(String s)
-	{
-				if(s.equals(input[0]))
-					System.out.println(output[0]);
-				else if(s.equals(input[1]))
-					System.out.println(output[22]);
-				else if(s.equals(input[2]))
-					System.out.println(output[8]);
-				else if(s.equals(input[3]))
-					System.out.println(output[21]);
-				else if(s.equals(input[4]))
-					System.out.println(output[19]);
-				else if(s.equals(input[5]))
-					System.out.println(output[11]);
-				else if(s.equals(input[6]))
-					System.out.println(output[13]);
-				else if(s.equals(input[7]))
-					System.out.println(output[1]);
-				else if(s.equals(input[8]))
-					System.out.println(output[3]);
-				else if(s.equals(input[9]))
-					System.out.println(output[15]);
-				else if(s.equals(input[10]))
-					System.out.println(output[16]);
-				else if(s.equals(input[11]))
-					System.out.println(output[5]);
-				else if(s.equals(input[12]))
-					System.out.println(output[6]);
-				else if(s.equals(input[13]))
-					System.out.println(output[23]);
-				else if(s.equals(input[14]))
-					System.out.println(output[14]);
-				else if(s.equals(input[15]))
-					System.out.println(output[9]);
-				else if(s.equals(input[16]))
-					System.out.println(output[2]);
-				else if(s.equals(input[17]))
-					System.out.println(output[7]);
-				else if(s.equals(input[18]))
-					System.out.println(output[4]);
-				else if(s.equals(input[19]))
-					System.out.println(output[10]);
-				else if(s.equals(input[20]))
-					System.out.println(output[12]);
-				else if(s.equals(input[21]))
-					System.out.println(output[17]);
-				else if(s.equals(input[22]))
-					System.out.println(output[18]);
-				else
-					System.out.println(output[20]);
-				
-				
-			}
-	
 	//for logical reason 
 	static void logicalReason(String s) 
 	{
-		int count=0;
-		String pair;
-		hash().get("tl’ol");
-		for(int i=0;i<input.length;i++)
-		{
-			if(hashGroup().get(input[i]).contains(Character.toString(hash().get("tl’ol"))))
-			{
-				count++;
-			}
-		}
-		if(count==0)
-		{
-			
-		}
-		
-		
-		
-		
+		findRoot();
+		hash();
 		HashMap<String,String> hmapA= new HashMap<>();
-		hmapA.put("tl’ol","harness");
-		hmapA.put("dətay", "duck");}
+		for(int i=0;i<findRoot().size();i++)
+		{
+			switch (i)
+			{
+			case 0:
+				hmapA.put(findRoot().get(0),"abdomen");
+			case 1:
+				hmapA.put(findRoot().get(1),"top/upper");
+			case 2:
+				hmapA.put(findRoot().get(2),"feather");
+			case 3:
+				hmapA.put(findRoot().get(3),"snow");
+			case 4:
+				hmapA.put(findRoot().get(4),"frog");
+			case 5:
+				hmapA.put(findRoot().get(5),"duck");
+			case 6:
+				hmapA.put(findRoot().get(6),"blanket");
+			case 7:
+				hmapA.put(findRoot().get(7),"man");
+			case 8:
+				hmapA.put(findRoot().get(8),"face");
+			case 9:
+				hmapA.put(findRoot().get(9),"dog");
+			case 10:
+				hmapA.put(findRoot().get(10),"harness");
+			case 11:
+				hmapA.put(findRoot().get(11),"female");
+			case 12:
+				hmapA.put(findRoot().get(12),"cold");
+			case 13:
+				hmapA.put(findRoot().get(13),"tooth");
+			default:
+			}	
+		}
+		String answer="";
+		int count=0;
+		for(int i=0;i<findRoot().size();i++)
+		{
+			if(s.contains(findRoot().get(i)))
+ 			{
+ 				answer+=hmapA.get(findRoot().get(i));
+ 				answer=answer+" ";
+ 				count++;
+ 			}
+		}
+		System.out.println(answer);
+	}
 		
-}
 
+
+
+
+
+}
 
