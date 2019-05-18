@@ -59,6 +59,7 @@ public class lingathon{
 	{
 		// TODO Auto-generated method stub
 		Scanner sc= new Scanner(System.in);	
+		
 		System.out.println("input:");
 		String s= sc.nextLine();
 		match(s);
@@ -128,6 +129,10 @@ public class lingathon{
 	}	
 	
 	//Group questions with hash table
+	
+	
+	
+	
 	static HashMap<String,String> hashGroup()
 	{
 		ArrayList<String> root= new ArrayList<>(findRoot());
@@ -223,14 +228,85 @@ public class lingathon{
 	
 	
 	
-	//for matching quesiton and answer
-	static void match(String s) 
+	static void match(String s)
 	{
+				if(s.equals(input[0]))
+					System.out.println(output[0]);
+				else if(s.equals(input[1]))
+					System.out.println(output[22]);
+				else if(s.equals(input[2]))
+					System.out.println(output[8]);
+				else if(s.equals(input[3]))
+					System.out.println(output[21]);
+				else if(s.equals(input[4]))
+					System.out.println(output[19]);
+				else if(s.equals(input[5]))
+					System.out.println(output[11]);
+				else if(s.equals(input[6]))
+					System.out.println(output[13]);
+				else if(s.equals(input[7]))
+					System.out.println(output[1]);
+				else if(s.equals(input[8]))
+					System.out.println(output[3]);
+				else if(s.equals(input[9]))
+					System.out.println(output[15]);
+				else if(s.equals(input[10]))
+					System.out.println(output[16]);
+				else if(s.equals(input[11]))
+					System.out.println(output[5]);
+				else if(s.equals(input[12]))
+					System.out.println(output[6]);
+				else if(s.equals(input[13]))
+					System.out.println(output[23]);
+				else if(s.equals(input[14]))
+					System.out.println(output[14]);
+				else if(s.equals(input[15]))
+					System.out.println(output[9]);
+				else if(s.equals(input[16]))
+					System.out.println(output[2]);
+				else if(s.equals(input[17]))
+					System.out.println(output[7]);
+				else if(s.equals(input[18]))
+					System.out.println(output[4]);
+				else if(s.equals(input[19]))
+					System.out.println(output[10]);
+				else if(s.equals(input[20]))
+					System.out.println(output[12]);
+				else if(s.equals(input[21]))
+					System.out.println(output[17]);
+				else if(s.equals(input[22]))
+					System.out.println(output[18]);
+				else
+					System.out.println(output[20]);
+				
+				
+			}
+	
+	//for logical reason 
+	static void logicalReason(String s) 
+	{
+		int count=0;
+		String pair;
+		hash().get("tl’ol");
+		for(int i=0;i<input.length;i++)
+		{
+			if(hashGroup().get(input[i]).contains(Character.toString(hash().get("tl’ol"))))
+			{
+				count++;
+			}
+		}
+		if(count==0)
+		{
+			
+		}
+		
+		
+		
+		
 		HashMap<String,String> hmapA= new HashMap<>();
 		hmapA.put("tl’ol","harness");
-		hmapA.put("dətay", "duck");
+		hmapA.put("dətay", "duck");}
 		
-	}
 }
 
 
